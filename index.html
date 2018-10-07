@@ -1,528 +1,556 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
-  <title>Aves en colombia</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Aves en colombia</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-   <link rel="stylesheet" href="css/animations.css">
-  <style type="text/css">
-  body{
-    background-color:  #145a32 ;
-  }
+    <link rel="stylesheet" href="css/animations.css">
+    <style type="text/css">
+        body {
+            background-color: #145a32;
+        }
+        
+        .caja {
+            font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+            background: #186a3b;
+            margin: 0 0 25px;
+            overflow: hidden;
+            padding: 20px;
+            border-radius: 35px 0px 35px 0px;
+            -moz-border-radius: 35px 0px 35px 0px;
+            -webkit-border-radius: 35px 0px 35px 0px;
+            border: 2px solid #5878ca;
+        }
+        
+        .mon {
+            -webkit-box-shadow: 3px 3px 6px 0px rgba(50, 50, 50, 0.26);
+            -moz-box-shadow: 3px 3px 6px 0px rgba(50, 50, 50, 0.26);
+            box-shadow: 3px 3px 6px 0px rgba(50, 50, 50, 0.26);
+            text-align: center;
+            background-image: url(img/Tucan.jpg);
+            /* Full height */
+            width: 100%;
+            height: 500px;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fondo-blur {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fondo-blur::before {
+            content: '';
+            display: block;
+            background: inherit;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            filter: blur(15px);
+            transform: scale(1.2, 1.4);
+        }
+        
+        .navb {
+            margin-top: 25%;
+        }
+        
+        .img-fluid {
+            height: 240px;
+            width: 400px;
+        }
+        
+        .caro {
+            height: 500px;
+            width: 100%;
+        }
+        
+        #svgs svg {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
 
-      .caja {
-font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-color: #ffffff;
-font-size: 18px;
-font-weight: 400;
-text-align: center;
-background: #186a3b ;
-margin: 0 0 25px;
-overflow: hidden;
-padding: 20px;
-border-radius: 35px 0px 35px 0px;
--moz-border-radius: 35px 0px 35px 0px;
--webkit-border-radius: 35px 0px 35px 0px;
-border: 2px solid #5878ca;
-
-}
-.mon{
--webkit-box-shadow: 3px 3px 6px 0px rgba(50, 50, 50, 0.26);
--moz-box-shadow:    3px 3px 6px 0px rgba(50, 50, 50, 0.26);
-box-shadow:         3px 3px 6px 0px rgba(50, 50, 50, 0.26);
-text-align: center;
-  background-image: url(img/Tucan.jpg) ;
-  /* Full height */
-  width: 100%;
-  height: 500px;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  overflow: hidden;
-}
-.fondo-blur{
-  position: relative;
-  overflow: hidden;
-}
-
-.fondo-blur::before{
-  content: '';
-  display: block;
-  background: inherit;
-  position: absolute;
-  width: 100%; height: 100%;
-  left: 0; top: 0;
-  filter: blur(15px);
-  transform: scale(1.2,1.4);
-}
-.navb{
-  margin-top: 25%;
-}
-.img-fluid{
-  height: 240px;
-  width: 400px;
-}
-.caro{
-height: 500px;
-width: 100%;
-  }
-
-  </style>
-    
 
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <div class="animatedParent">
-  <div class="col-12">
-    <div class="mon text-light animated fadeInUpShort">
-      <h1 class="font-weight-bold pr-3 pt-3 display-4">Aves en colombia</h1>  
+    <!-- HEADER -->
+    <div class="animatedParent">
+        <div class="col-12">
+            <div class="mon text-light animated fadeInUpShort">
+                <h1 class="font-weight-bold pr-3 pt-3 display-4">Aves en colombia</h1>
 
-    <div class="pt-3 w-100 navb">
-     <a href="#" class="btn btn-sm btn-outline-light m-1" role="button"><h5>Inicio</h5></a>
-     <a href="#resu" class="btn btn-sm btn-outline-light m-1" role="button"><h5>Resumen actual de aves en colombia</h5></a>
-     <a href="#uni" class="btn btn-sm btn-outline-light m-1" role="button"><h5>Aves unicas en colombia</h5></a>
-       <a href="#reg" class="btn btn-sm btn-outline-light m-1" role="button"><h5>Aves por regiones</h5></a>
-    </div>  
+                <div class="pt-3 w-100 navb">
+                    <a href="#" class="btn btn-sm btn-outline-light m-1" role="button">
+                        <h5>Inicio</h5>
+                    </a>
+                    <a href="#resu" class="btn btn-sm btn-outline-light m-1" role="button">
+                        <h5>Resumen actual de aves en colombia</h5>
+                    </a>
+                    <a href="#uni" class="btn btn-sm btn-outline-light m-1" role="button">
+                        <h5>Aves unicas en colombia</h5>
+                    </a>
+                    <a href="#reg" class="btn btn-sm btn-outline-light m-1" role="button">
+                        <h5>Aves por regiones</h5>
+                    </a>
+                </div>
+            </div>
+
+        </div>
     </div>
-
-</div>
-</div>
-<!-- FIN HEADER -->
+    <!-- FIN HEADER -->
 
 
-<div class="container">
+    <div class="container">
 
 
-  <!--RESUMEN -->
-   <div class="animatedParent">
-<div class="row animated fadeInDownShort slowest ">
-<div name="resu" id="resu" class="col-12 caja border mt-5">
-  <h1 >Resumen actual de aves en colombia</h1>
-  <p>Después de 15 años de compilación de registros, trabajo de campo y revisiones detalladas de los autores y luego de las respectivas publicaciones, se revela el sorprendente hecho de que Colombia alberga casi una quinta parte (18 %) de las 10.507 aves conocidas en la Tierra (fuente: IOC), en tan sólo el 0,8 % de la superficie terrestre, (que equivale en área al tamaño de Texas y California). Colombia ha registrado casi el doble de especies de aves registradas en el territorio continental de Estados Unidos y Canadá (976 especies) (fuente: ABA) .</p>
-  <p>Colombia actualmente se encuentra por encima de los países más diversos del mundo como Perú con 1.838 especies y Brasil con 1.798 especies. Por otro lado, el número de especies “confirmadas” con fotografías o registros de especímenes para Colombia es de 1850 (superior a los totales de Perú 1762 y Brasil con 1771 especies).</p>
-</div>
-</div>
-</div>
-<!--FIN RESUMEN -->
-
-
-
-<!--Solo en colombia -->
-<div class="container">
- <div class="row animatedParent">
-
-  <a name="uni" id="uni"></a>
-  <div  class="col-12 border caja">   
-   <h1>Algunas aves que solo se encuentran en colombia</h1>
-  </div> 
+        <!--RESUMEN -->
+        <div class="animatedParent">
+            <div class="row animated fadeInDownShort slowest ">
+                <div name="resu" id="resu" class="col-12 caja border mt-5">
+                    <h1>Resumen actual de aves en colombia</h1>
+                    <p>Después de 15 años de compilación de registros, trabajo de campo y revisiones detalladas de los autores y luego de las respectivas publicaciones, se revela el sorprendente hecho de que Colombia alberga casi una quinta parte (18 %)
+                        de las 10.507 aves conocidas en la Tierra (fuente: IOC), en tan sólo el 0,8 % de la superficie terrestre, (que equivale en área al tamaño de Texas y California). Colombia ha registrado casi el doble de especies de aves registradas
+                        en el territorio continental de Estados Unidos y Canadá (976 especies) (fuente: ABA) .</p>
+                    <p>Colombia actualmente se encuentra por encima de los países más diversos del mundo como Perú con 1.838 especies y Brasil con 1.798 especies. Por otro lado, el número de especies “confirmadas” con fotografías o registros de especímenes
+                        para Colombia es de 1850 (superior a los totales de Perú 1762 y Brasil con 1771 especies).</p>
+                </div>
+            </div>
+        </div>
+        <!--FIN RESUMEN -->
 
 
 
-<div class="col-md-4 animated fadeInDownShort mt-2"> 
-<div class="card">
-  <img class="img-fluid w-100" src="img/d29b79c0cfd8ec6460e30dd67e3f508d.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Chlorochrysa nitidissima</h5>
-<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal1">Mas info</button>
-  </div>
-</div>
-</div>
+        <!--Solo en colombia -->
+        <div class="container">
+            <div class="row animatedParent">
+
+                <a name="uni" id="uni"></a>
+                <div class="col-12 border caja">
+                    <h1>Algunas aves que solo se encuentran en colombia</h1>
+                </div>
 
 
 
-<div class="col-md-4 animated fadeInDownShort mt-2">
-<div class="card">
-  <img class="img-fluid w-100" src="img/Blue-chinned_Saphire.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Chlorostilbon olivaresi</h5>
-<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal2">Mas info</button>
-  </div>
-</div>
-</div>
-
-
-<div class="col-md-4 animated fadeInDownShort mt-2">
-<div class="card">
-  <img class="img-fluid w-100" src="img/Dusky_Startfrontlet_3.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Coeligena orina</h5>
-<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal3">Mas info</button>
-  </div>
-</div>
-</div>
-
-
-<div class="col-12 mt-1 mb-1"></div>
-
-
-<div class="col-md-4 animated fadeInDownShort mt-2">
-<div class="card">
-  <img class="img-fluid w-100" src="img/_96741918_dioliornis_remseni_alejandro_cartagena.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Doliornis remsenia</h5>
-  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal4">Mas info</button>
-  </div>
-</div>
-</div>
-
- 
-
-<div class="col-md-4 animated fadeInDownShort mt-2">
-<div class="card">
-  <img class="img-fluid w-100" src="img/grallaire.de.fenwick.prfu.1g.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Grallaria urraoensis</h5>   
-<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal5">Mas info</button>
-  </div>
-</div>
-</div>
+                <div class="col-md-4 animated fadeInDownShort mt-2">
+                    <div class="card">
+                        <img class="img-fluid w-100" src="img/d29b79c0cfd8ec6460e30dd67e3f508d.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Chlorochrysa nitidissima</h5>
+                            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal1">Mas info</button>
+                        </div>
+                    </div>
+                </div>
 
 
 
-<div class="col-md-4 animated fadeInDownShort mt-2">
-<div class="card">
-  <img class="img-fluid w-100" src="img/_96743658_p0579v2f.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Lipaugus weberi</h5> 
-<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal6">Mas info</button>
-  </div>
-</div>
-</div>
+                <div class="col-md-4 animated fadeInDownShort mt-2">
+                    <div class="card">
+                        <img class="img-fluid w-100" src="img/Blue-chinned_Saphire.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Chlorostilbon olivaresi</h5>
+                            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal2">Mas info</button>
+                        </div>
+                    </div>
+                </div>
 
 
-</div>
+                <div class="col-md-4 animated fadeInDownShort mt-2">
+                    <div class="card">
+                        <img class="img-fluid w-100" src="img/Dusky_Startfrontlet_3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Coeligena orina</h5>
+                            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal3">Mas info</button>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Fin row-->
-</div>
-<!-- Fin solo colombia animate -->
+
+                <div class="col-12 mt-1 mb-1"></div>
+
+
+                <div class="col-md-4 animated fadeInDownShort mt-2">
+                    <div class="card">
+                        <img class="img-fluid w-100" src="img/_96741918_dioliornis_remseni_alejandro_cartagena.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Doliornis remsenia</h5>
+                            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal4">Mas info</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-4 animated fadeInDownShort mt-2">
+                    <div class="card">
+                        <img class="img-fluid w-100" src="img/grallaire.de.fenwick.prfu.1g.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Grallaria urraoensis</h5>
+                            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal5">Mas info</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-4 animated fadeInDownShort mt-2">
+                    <div class="card">
+                        <img class="img-fluid w-100" src="img/_96743658_p0579v2f.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Lipaugus weberi</h5>
+                            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal6">Mas info</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Fin row-->
+        </div>
+        <!-- Fin solo colombia animate -->
 
 
 
 
-<!-- Modales solo colombia -->
-<div class="container">
-<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Chlorochrysa nitidissima</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <!-- Modales solo colombia -->
+        <div class="container">
+            <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Chlorochrysa nitidissima</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        <video controls style="width: 480px; height: 350px;">
+                        </div>
+                        <div class="modal-body">
+                            <video controls style="width: 480px; height: 350px;">
   <source src="Audio/endemic, Multicoloured Tanager, Chlorochrysa nitidissima, Central Andes (Finca La Alejandria).mp4" class="w-100" type="video/mp4">
-</video>
-       Es una tangara, que habita bosques premontanos en las cordilleras Central y Occidental de Colombia. "Es uno de los pájaros 'multicolores' más lindos y variopintos del mundo", dice Calderón. "Muy apetecida por pajareros locales y extranjeros", agrega.
-      </div>
-      <div class="modal-footer">
-      	<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        </div>
-    </div>
-  </div>
-</div>
+</video> Es una tangara, que habita bosques premontanos en las cordilleras Central y Occidental de Colombia. "Es uno de los pájaros 'multicolores' más lindos y variopintos del mundo", dice Calderón. "Muy apetecida por pajareros
+                            locales y extranjeros", agrega.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Chlorostilbon olivaresi</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Chlorostilbon olivaresi</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-          <video controls style="width: 480px; height: 350px;">
+                        </div>
+                        <div class="modal-body">
+                            <video controls style="width: 480px; height: 350px;">
   <source src="Audio/Blue-chinned_Emerald_Chlorostilbon_notatus.mp4" class="w-100" type="video/mp4">
-</video>
- Se lo conoce como esmeralda de Chiribiquete. Es un colibrí. "Ese lo han visto diez personas", dice Álvarez -quien propuso incluirlo en la lista- respecto a lo difícil de avistar esta especie, que es una de las pocas aves endémicas (que sólo se encuentran en Colombia) de la Amazonia.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Coeligena orina</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+</video> Se lo conoce como esmeralda de Chiribiquete. Es un colibrí. "Ese lo han visto diez personas", dice Álvarez -quien propuso incluirlo en la lista- respecto a lo difícil de avistar esta especie, que es una de las pocas
+                            aves endémicas (que sólo se encuentran en Colombia) de la Amazonia.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Coeligena orina</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-         
- <video controls style="width: 480px; height: 350px;">
-  <source src="Audio/Coeligena_orina.mp4" class="w-100" type="video/mp4">
-</video>
-Lo llaman inca de Frontino, con plumaje verde brillante. Es, dice Álvarez: "Un colibrí rarísimo, todo el mundo quisiera verlo". Es muy raro, de acuerdo con la guía de Princeton, sólo se encuentra en el lado este del Parque Nacional Natural Las Orquídeas (de 32.000 hectáreas), en el departamento de Antioquia.
-    </div>
-      <div class="modal-footer">
+                        </div>
+                        <div class="modal-body">
 
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Doliornis remsenia</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <video controls style="width: 480px; height: 350px;">
+  <source src="Audio/Coeligena_orina.mp4" class="w-100" type="video/mp4">
+</video> Lo llaman inca de Frontino, con plumaje verde brillante. Es, dice Álvarez: "Un colibrí rarísimo, todo el mundo quisiera verlo". Es muy raro, de acuerdo con la guía de Princeton, sólo se encuentra en el lado este del
+                            Parque Nacional Natural Las Orquídeas (de 32.000 hectáreas), en el departamento de Antioquia.
+                        </div>
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Doliornis remsenia</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-         <img class="card-img-top w-100" src="img/_96741918_dioliornis_remseni_alejandro_cartagena.jpg" alt="Card image cap">
-         Su rareza y muy peculiar color vinotinto la hacen muy enigmática, cuenta. Y por lo rara, ha vuelto al departamento del Putumayo uno de los mejores destinos para ver aves en Colombia.
-    </div>
-      <div class="modal-footer">
-      	  <audio controls>
+                        </div>
+                        <div class="modal-body">
+                            <img class="card-img-top w-100" src="img/_96741918_dioliornis_remseni_alejandro_cartagena.jpg" alt="Card image cap"> Su rareza y muy peculiar color vinotinto la hacen muy enigmática, cuenta. Y por lo rara, ha vuelto al departamento
+                            del Putumayo uno de los mejores destinos para ver aves en Colombia.
+                        </div>
+                        <div class="modal-footer">
+                            <audio controls>
   <source src="Audio/Doliornis_remsenia.mp3" type="audio/mp3">
 </audio>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Grallaria urraoensis</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Grallaria urraoensis</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-         <img class="card-img-top w-100" src="img/grallaire.de.fenwick.prfu.1g.jpg" alt="Card image cap">
-"Su distribución es diminuta, solo se encuentra en un cerro cerca del Páramo de Frontino, en la Cordillera Occidental", explica Cuervo de esta especie conocida como tororoi de Urrao, "y hasta allá, a lomo de mula, por la larga falda de la montaña, llegan observadores de todo el mundo a ver esta joya de la avifauna nacional y otras especialidades de la zona, como el colibrí Coeligena orina, que es también de la región, pero que tiene los más espectaculares colores".
-    </div>
-      <div class="modal-footer">
-      	<audio controls>
+                        </div>
+                        <div class="modal-body">
+                            <img class="card-img-top w-100" src="img/grallaire.de.fenwick.prfu.1g.jpg" alt="Card image cap"> "Su distribución es diminuta, solo se encuentra en un cerro cerca del Páramo de Frontino, en la Cordillera Occidental", explica
+                            Cuervo de esta especie conocida como tororoi de Urrao, "y hasta allá, a lomo de mula, por la larga falda de la montaña, llegan observadores de todo el mundo a ver esta joya de la avifauna nacional y otras especialidades de
+                            la zona, como el colibrí Coeligena orina, que es también de la región, pero que tiene los más espectaculares colores".
+                        </div>
+                        <div class="modal-footer">
+                            <audio controls>
   <source src="Audio/XC240030-OHM019B_0628 Chlorochryssa nitidissima.mp3" type="audio/mp3">
 </audio>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Lipaugus weberi</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Lipaugus weberi</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-         <img class="card-img-top w-100" src="img/_96743658_p0579v2f.jpg" alt="Card image cap">
-"Esta rara ave fue descubierta hace casi 20 años por estudiantes de la Universidad de Antioquia en montañas inexploradas de su departamento, que habían escapado de la deforestación", relata Cuervo acerca de este pájaro llamado en español "arriero antioqueño". Cuervo fue quien hizo el hallazgo de este pájaro, cuando estaba en la Universidad de Antioquia.
-    </div>
-      <div class="modal-footer">
-      	<audio controls>
+                        </div>
+                        <div class="modal-body">
+                            <img class="card-img-top w-100" src="img/_96743658_p0579v2f.jpg" alt="Card image cap"> "Esta rara ave fue descubierta hace casi 20 años por estudiantes de la Universidad de Antioquia en montañas inexploradas de su departamento,
+                            que habían escapado de la deforestación", relata Cuervo acerca de este pájaro llamado en español "arriero antioqueño". Cuervo fue quien hizo el hallazgo de este pájaro, cuando estaba en la Universidad de Antioquia.
+                        </div>
+                        <div class="modal-footer">
+                            <audio controls>
   <source src="Audio/Lipaugus weberi_Reserva La Serrana_Vereda La Serrana_Anori_Antioquia_Colombia_5JUN2000 bcc_Bernabe Lopez-Lanus.mp3" type="audio/mp3">
 </audio>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- Fin container modales solo clmbia -->
+
     </div>
-  </div>
-</div>
-</div>
-<!-- Fin container modales solo clmbia -->
+    <!-- Fin container -->
 
-</div>
-<!-- Fin container -->
+    <!-- Aves regiones -->
+    <div class="container w-100">
+        <div class="animatedParent">
 
-<!-- Aves regiones -->
-<div class="container w-100">
- <div class="animatedParent">  
+            <div class="col-12">
+                <a name="reg" id="reg"></a>
+                <div class="col-12 border caja mt-5 animated flipInX">
+                    <h1>Aves en algunas regiones del pais</h1>
+                </div>
+            </div>
 
-  <div class="col-12">   
-    <a name="reg" id="reg"></a>    
-    <div  class="col-12 border caja mt-5 animated flipInX">    
-   <h1>Aves en algunas regiones del pais</h1></div> 
-</div>
+            <div class="row">
+                <div class="nav flex-column nav-pills pr-2 pl-2 col-12 col-md-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active btn btn-sm btn-outline-light m-1" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Region Pacifica</a>
+                    <a class="nav-link btn btn-sm btn-outline-light m-1" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Region Andina</a>
+                    <a class="nav-link btn btn-sm btn-outline-light m-1" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Region Amazonia</a>
+                    <a class="nav-link btn btn-sm btn-outline-light m-1" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Region Orinoquia</a>
+                </div>
 
-<div class="row">
-<div class="nav flex-column nav-pills pr-2 pl-2 col-12 col-md-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-  <a class="nav-link active btn btn-sm btn-outline-light m-1" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Region Pacifica</a>
-  <a class="nav-link btn btn-sm btn-outline-light m-1" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Region Andina</a>
-  <a class="nav-link btn btn-sm btn-outline-light m-1" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Region Amazonia</a>
-  <a class="nav-link btn btn-sm btn-outline-light m-1" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Region Orinoquia</a>
-</div>
+                <!-- Contenedor regiones -->
+                <div class="tab-content col-12 col-md-9" id="v-pills-tabContent">
 
-<!-- Contenedor regiones -->
-<div class="tab-content col-12 col-md-9" id="v-pills-tabContent">
+                    <!-- Pacifico -->
+                    <div class="tab-pane fade show active animated fadeInUpShort" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div id="carouselExampleIndicators" class="carousel slide caro" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="caro" src="img/Scarlet_Macaw_(Ara_macao)_-raising_leg.jpg" alt="First slide">
+                                        <div class="carousel-caption d-md-block bg-dark">
+                                            <h5>Ara spp (Guacamaya)</h5>
+                                            <p>Aves de cola larga y pico fuerte, Presentan un plumaje con colores variados entre ellos la guacamaya azul Ara ararauna, guacamayo rojo, Ara macao. </p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img class="caro " src="img/Phoenicopterus_ruber_Linnaeus_1758.jpg" alt="First slide">
+                                        <div class="carousel-caption d-md-block bg-dark">
+                                            <h5>Phoenicopterus (Flamenco)</h5>
+                                            <p>Aves de cola larga y pico fuerte, Presentan un plumaje con colores variados entre ellos la guacamaya azul Ara ararauna, guacamayo rojo, Ara macao. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pacifico Fin -->
 
-<!-- Pacifico -->
-  <div class="tab-pane fade show active animated fadeInUpShort" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">    
-<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-<div id="carouselExampleIndicators" class="carousel slide caro" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-     </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="caro" src="img/Scarlet_Macaw_(Ara_macao)_-raising_leg.jpg" alt="First slide">
-        <div class="carousel-caption d-md-block bg-dark">
-    <h5>Ara spp (Guacamaya)</h5>
-    <p>Aves de cola larga y pico fuerte, Presentan un plumaje con colores variados entre ellos la guacamaya azul Ara ararauna, guacamayo rojo, Ara macao. </p>
+                    <!-- Andina -->
+                    <div class="tab-pane fade show animated fadeInUpShort" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <div id="carouselExampleIndicators2" class="carousel slide caro" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="caro" src="img/24318529069_9dab316e49_b.jpg" alt="First slide">
+                                        <div class="carousel-caption d-md-block bg-dark">
+                                            <h5>Tángara roja migratoria - Summer tanager</h5>
+                                            <p>La tángara roja migratoria es una especie de ave paseriforme de la familia Cardinalidae. Los individuos adultos miden entre 17 y 19 cm.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img class="caro " src="img/Acorn Woodpecker b13-39-007_V.jpg" alt="First slide">
+                                        <div class="carousel-caption d-md-block bg-dark">
+                                            <h5>Carpintero payaso o Carpintero de los Robles - Acorn Woodpecker</h5>
+                                            <p>Esta especie un ave bastante ruidosa y gregaria propia de los Andes que se encuentra fuertemente asociada a bosques de roble (Quercus). </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Andina Fin-->
+
+                    <!-- Amazonia -->
+                    <div class="tab-pane fade show animated fadeInUpShort" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <div class="tab-pane fade show active" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                            <div id="carouselExampleIndicators3" class="carousel slide caro" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators3" data-slide-to="1"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="caro" src="img/Alipiopsitta-xanthops.jpg" alt="First slide">
+                                        <div class="carousel-caption d-md-block bg-dark">
+                                            <h5>Loro cariamarillo o Alipiopsitta Xanthops</h5>
+                                            <p>La tángara roja migratoria es una especie de ave paseriforme de la familia Cardinalidae. Los individuos adultos miden entre 17 y 19 cm.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img class="caro " src="img/trepatroncos-Zimmers-Woodcreeper.jpg" alt="First slide">
+                                        <div class="carousel-caption d-md-block bg-dark">
+                                            <h5>Trepatroncos Zimmer’s Woodcreeper</h5>
+                                            <p>El Trepador de Zimmer también conocido como Drendoplex Kienerii habita en las zonas cercanas al Amazonas en las tierras que pisan Perú. Es tan parecido a la recta trepador que es casi imposible diferenciarlos.
+                                                Esta especie está en peligro de extinción.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators3" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Amazonia Fin-->
+
+                    <!-- Orinoquia -->
+                    <div class="tab-pane fade show animated fadeInUpShort" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                        <div class="tab-pane fade show active" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                            <div id="carouselExampleIndicators4" class="carousel slide caro" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators4" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators4" data-slide-to="1"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="caro" src="img/e07086bdf13a9b8c997b87f711064246.jpg" alt="First slide">
+                                        <div class="carousel-caption d-md-block bg-dark">
+                                            <h5>Eudocimus ruber| Scarlet Ibis</h5>
+                                            <p>Esta especie se encuentra en tierras bajas del valle bajo del río Magdalena y al oriente de los Andes. Su nombre deriva del griego eudokimos que significa glorioso, mientras que el epíteto ruber hace referencia
+                                                a su coloración, deriva del latín y significa rojo.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img class="caro " src="img/Martn pescador pigmeo Chloroceryle aenea aenea.jpg" alt="First slide">
+                                        <div class="carousel-caption d-md-block bg-dark">
+                                            <h5>Martín pescador pigmeo Chloroceryle aenea</h5>
+                                            <p>El martín pescador enano​ es una especie de ave coraciforme de la familia Cerylidae que reside en las tierras bajas de los trópicos americanos; se distribuye desde el sur de México a través de Centroamérica
+                                                al centro de Brasil.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators4" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators4" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Orinoquia Fin-->
+                </div>
+                <!-- Contenerdor regiones Fin -->
+            </div>
+            <!-- Row Fin-->
+        </div>
+        <!-- Container Fin-->
     </div>
-    </div>
-    <div class="carousel-item ">
-      <img class="caro " src="img/Phoenicopterus_ruber_Linnaeus_1758.jpg" alt="First slide">
-        <div class="carousel-caption d-md-block bg-dark">
-    <h5>Phoenicopterus (Flamenco)</h5>
-    <p>Aves de cola larga y pico fuerte, Presentan un plumaje con colores variados entre ellos la guacamaya azul Ara ararauna, guacamayo rojo, Ara macao. </p>
-    </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-</div>    
-  </div>
-  <!-- Pacifico Fin -->
-
-<!-- Andina -->
-   <div class="tab-pane fade show animated fadeInUpShort" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">    
-<div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-<div id="carouselExampleIndicators2" class="carousel slide caro" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
-     </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="caro" src="img/24318529069_9dab316e49_b.jpg" alt="First slide">
-        <div class="carousel-caption d-md-block bg-dark">
-    <h5>Tángara roja migratoria - Summer tanager</h5>
-    <p>La tángara roja migratoria es una especie de ave paseriforme de la familia Cardinalidae. Los individuos adultos miden entre 17 y 19 cm.</p>
-    </div>
-    </div>
-    <div class="carousel-item ">
-      <img class="caro " src="img/Acorn Woodpecker b13-39-007_V.jpg" alt="First slide">
-        <div class="carousel-caption d-md-block bg-dark">
-    <h5>Carpintero payaso o Carpintero de los Robles - Acorn Woodpecker</h5>
-    <p>Esta especie un ave bastante ruidosa  y gregaria propia de los Andes que se encuentra fuertemente asociada a bosques de roble (Quercus). </p>
-    </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-</div>    
-  </div>
-  <!-- Andina Fin-->
-
-<!-- Amazonia -->
-   <div class="tab-pane fade show animated fadeInUpShort" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">    
-<div class="tab-pane fade show active" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-<div id="carouselExampleIndicators3" class="carousel slide caro" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators3" data-slide-to="1"></li>
-     </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="caro" src="img/Alipiopsitta-xanthops.jpg" alt="First slide">
-        <div class="carousel-caption d-md-block bg-dark">
-    <h5>Loro cariamarillo o Alipiopsitta Xanthops</h5>
-    <p>La tángara roja migratoria es una especie de ave paseriforme de la familia Cardinalidae. Los individuos adultos miden entre 17 y 19 cm.</p>
-    </div>
-    </div>
-    <div class="carousel-item ">
-      <img class="caro " src="img/trepatroncos-Zimmers-Woodcreeper.jpg" alt="First slide">
-        <div class="carousel-caption d-md-block bg-dark">
-    <h5>Trepatroncos Zimmer’s Woodcreeper</h5>
-    <p>El Trepador de Zimmer también conocido como Drendoplex Kienerii habita en las zonas cercanas al Amazonas en las tierras que pisan Perú. Es tan parecido a la recta trepador que es casi imposible diferenciarlos. Esta especie está en peligro de extinción.</p>
-    </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators3" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-</div>    
-  </div>
-  <!-- Amazonia Fin-->
-
-  <!-- Orinoquia -->
-   <div class="tab-pane fade show animated fadeInUpShort" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">    
-<div class="tab-pane fade show active" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-<div id="carouselExampleIndicators4" class="carousel slide caro" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators4" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators4" data-slide-to="1"></li>
-     </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="caro" src="img/e07086bdf13a9b8c997b87f711064246.jpg" alt="First slide">
-        <div class="carousel-caption d-md-block bg-dark">
-    <h5>Eudocimus ruber| Scarlet Ibis</h5>
-    <p>Esta especie se encuentra en tierras bajas del valle bajo del río Magdalena y al oriente de los Andes. Su nombre deriva del griego eudokimos que significa glorioso, mientras que el epíteto ruber hace referencia a su coloración, deriva del latín y significa rojo.</p>
-    </div>
-    </div>
-    <div class="carousel-item ">
-      <img class="caro " src="img/Martn pescador pigmeo Chloroceryle aenea aenea.jpg" alt="First slide">
-        <div class="carousel-caption d-md-block bg-dark">
-    <h5>Martín pescador pigmeo Chloroceryle aenea</h5>
-    <p>El martín pescador enano​ es una especie de ave coraciforme de la familia Cerylidae que reside en las tierras bajas de los trópicos americanos; se distribuye desde el sur de México a través de Centroamérica al centro de Brasil.</p>
-    </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators4" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators4" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-</div>    
-  </div>
-  <!-- Orinoquia Fin-->
-</div>
-<!-- Contenerdor regiones Fin -->
-  </div>
-  <!-- Row Fin-->
-</div>
-<!-- Container Fin-->
-</div>
-<!-- Aves regiones Fin-->
+    <!-- Aves regiones Fin-->
 
 
 
@@ -533,41 +561,62 @@ Lo llaman inca de Frontino, con plumaje verde brillante. Es, dice Álvarez: "Un 
 
 
 
-<!-- FOOTER -->
-<div class="animatedParent"> 
-<footer class="pt-5 text-muted text-center text-small">
-<div class="card animated fadeInUp">
-  <div class="card-body">
-    <blockquote class="blockquote text-center">
-     <div class="d-inline-flex flex-row">
+    <!-- FOOTER -->
+    <div class="animatedParent">
+        <footer class="pt-5 text-muted text-center text-small">
+            <div class="card animated fadeInUp">
+                <div class="card-body">
+                    <blockquote class="blockquote text-center">
+                        <div class="d-inline-flex flex-row">
 
-      <div class=""><ul><b>Linea</b></ul>
-        <ul><h6>Profundizacion I</h6></ul>
-        <ul><h6>Ingenieria de Software</h6></ul>
-        <ul><h6>USCO 2018-1</h6></ul>
-      </div>
-      <div class="p-2"></div>
-      <div class=""><ul><b>Tecnologias usadas</b></ul>
-        <ul><h6><a href="https://getbootstrap.com/">Bootstrap4</a></h6></ul>
-        <ul><h6><a href="http://jackonthe.net/css3animateit/">css3animateit</a></h6></ul>
-      </div>
+                            <div class="">
+                                <ul><b>Linea</b></ul>
+                                <ul>
+                                    <h6>Profundizacion I</h6>
+                                </ul>
+                                <ul>
+                                    <h6>Ingenieria de Software</h6>
+                                </ul>
+                                <ul>
+                                    <h6>USCO 2018-1</h6>
+                                </ul>
+                            </div>
+                            <div class="p-2"></div>
+                            <div class="">
+                                <ul><b>Tecnologias usadas</b></ul>
+                                <ul>
+                                    <h6><a href="https://getbootstrap.com/">Bootstrap4</a></h6>
+                                </ul>
+                                <ul>
+                                    <h6><a href="http://jackonthe.net/css3animateit/">css3animateit</a></h6>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </blockquote>
+                </div>
+                <div class="card-header">
+                    <abbr title="Pagina web sobre aves en colombia">Aves en colombia</abbr>
+                    <footer class="blockquote-footer"> Por:<cite title="Source Title"> Diego Monsalve &copy; 2018</cite></footer>
+
+                    <a id="svgs" href="https://github.com/monsa12"><svg aria-labelledby="simpleicons-github-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-github-icon">Mira algunos de mis proyectos en GitHub</title>
+                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                    </a>
+                    <a id="svgs" href="https://facebook.com/diiegomonsalve12">
+                        <svg aria-labelledby="simpleicons-facebook-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-facebook-icon">Contactame en Facebook</title><path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"/></svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
     </div>
 
-  </blockquote>
-  </div>
-    <div class="card-header">
-    <abbr title="Profundizacion 1, trabajo final">Aves en colombia</abbr> 
-     <footer class="blockquote-footer">&copy; <cite title="Source Title">2018 Diego Monsalve</cite></footer>
-  </div>
-</div>
-      </footer>
-</div>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/css3-animate-it.js"></script>
 
-  <script src="js/jquery.slim.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/css3-animate-it.js"></script>
 
-  
 </body>
+
 </html>
